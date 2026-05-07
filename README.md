@@ -318,5 +318,19 @@ aw3d30_lr = root / row["lr_aw3d30_x2_path"]
 
 ## Recommended Citation and License
 
-Add citation and license details here before public distribution.
+### Dataset License
+
+The GM-DEM-SR dataset is released under the Creative Commons Attribution 4.0 International License (CC BY 4.0), unless otherwise noted.
+
+Users are free to share and adapt this dataset for research, education, and commercial or non-commercial applications, provided that appropriate credit is given to the GM-DEM-SR dataset and the original elevation data providers.
+
+This dataset contains derived DEM patches generated from multiple open elevation data products. The original elevation data remain subject to the licenses and terms of use of their respective providers.
+
+### Source Data Acknowledgement
+
+The high-resolution reference DEM patches are derived from Copernicus DEM GLO-30. Copernicus DEM GLO-30 and GLO-90 are available worldwide under a free license, and users are requested to cite the Copernicus DEM DOI when using the data.
+
+Cross-source evaluation subsets are derived from NASADEM and AW3D30. NASADEM data distributed by LP DAAC are public domain / CC0. AW3D30 is provided by JAXA and can be used free of charge under the JAXA terms of use; users should acknowledge JAXA as the original data provider.
+
+DEM data were accessed through OpenTopography. Users should also acknowledge OpenTopography as the data access platform.
 
