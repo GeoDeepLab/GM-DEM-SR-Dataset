@@ -31,6 +31,55 @@ GM_DEMSR_Dataset_release/
 
 All metadata paths are relative to this directory.
 
+## Dataset Overview
+
+### Dataset Size Summary
+
+Counts below are computed from the release metadata. "HR patches" means metadata
+patch entries in that task. Some geographic patches are intentionally reused
+across tasks, for example `main/test` and `same_region_cross_source/test`.
+
+| Task | Metadata CSV | Split | HR patches | LR variants per patch | LR GeoTIFFs | Total GeoTIFFs |
+| --- | --- | --- | --- | --- | --- | --- |
+| Main train | metadata/main_train.csv | train | 36000 | 3 | 108000 | 144000 |
+| Main val | metadata/main_val.csv | val | 4500 | 3 | 13500 | 18000 |
+| Main test | metadata/main_test.csv | test | 4500 | 3 | 13500 | 18000 |
+| Additional regions test | metadata/additional_regions_test.csv | test | 4500 | 3 | 13500 | 18000 |
+| Same-region cross-source test | metadata/same_region_cross_source_test.csv | test | 4500 | 6 | 27000 | 31500 |
+| Additional-region cross-source test | metadata/additional_region_cross_source_test.csv | test | 4500 | 6 | 27000 | 31500 |
+
+Release totals:
+
+| Item | Count |
+| --- | ---: |
+| Metadata patch entries | 58500 |
+| HR GeoTIFF entries | 58500 |
+| LR GeoTIFF entries | 202500 |
+| Total GeoTIFF entries | 261000 |
+
+### Mountain Coverage
+
+The table below lists all mountain regions represented in the release metadata.
+Counts are patch entries per task.
+
+| ID | Mountain zh | Mountain en | Main train | Main val | Main test | Additional regions | Same-region cross-source | Additional-region cross-source | Total metadata rows |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| A01 | 高加索山 | Caucasus | 0 | 0 | 0 | 1500 | 0 | 1500 | 3000 |
+| A02 | 新西兰南阿尔卑斯 | New Zealand Southern Alps | 0 | 0 | 0 | 1500 | 0 | 1500 | 3000 |
+| A03 | 黄土高原 | Loess Plateau | 0 | 0 | 0 | 1500 | 0 | 1500 | 3000 |
+| C01 | 喜马拉雅中东段 | Central-Eastern Himalaya | 3600 | 450 | 450 | 0 | 450 | 0 | 4950 |
+| C02 | 横断山区 | Hengduan Mountains | 3600 | 450 | 450 | 0 | 450 | 0 | 4950 |
+| C03 | 天山 | Tian Shan | 3600 | 450 | 450 | 0 | 450 | 0 | 4950 |
+| C04 | 喀喇昆仑山脉 | Karakoram | 1200 | 150 | 150 | 0 | 150 | 0 | 1650 |
+| C04 | 日本山地 / 日本阿尔卑斯 | Japanese Mountains / Japanese Alps | 1200 | 150 | 150 | 0 | 150 | 0 | 1650 |
+| C04 | 比利牛斯山脉 | Pyrenees | 1200 | 150 | 150 | 0 | 150 | 0 | 1650 |
+| C05 | Zagros-Alborz | Zagros-Alborz | 3600 | 450 | 450 | 0 | 450 | 0 | 4950 |
+| C06 | 阿尔卑斯山 | Alps | 3600 | 450 | 450 | 0 | 450 | 0 | 4950 |
+| C07 | 落基山脉 | Rocky Mountains | 3600 | 450 | 450 | 0 | 450 | 0 | 4950 |
+| C08 | 热带安第斯 | Tropical Andes | 3600 | 450 | 450 | 0 | 450 | 0 | 4950 |
+| C09 | 中部干旱安第斯 | Central Dry Andes | 3600 | 450 | 450 | 0 | 450 | 0 | 4950 |
+| C10 | 埃塞俄比亚高原 / 东非高地 | Ethiopian Highlands / East African Highlands | 3600 | 450 | 450 | 0 | 450 | 0 | 4950 |
+
 ## Dataset Tasks
 
 ### 1. Main Super-Resolution Task
@@ -180,6 +229,18 @@ metadata/additional_region_cross_source_test.csv
 metadata/all_tasks.csv
 ```
 
+Mountain-name columns:
+
+```text
+mountain_name
+mountain_name_zh
+mountain_name_en
+```
+
+`mountain_name` is kept for backward compatibility and currently matches
+`mountain_name_zh`. Use `mountain_name_en` when an English public-facing label
+is preferred.
+
 Main task CSV path columns:
 
 ```text
@@ -320,17 +381,27 @@ aw3d30_lr = root / row["lr_aw3d30_x2_path"]
 
 ### Dataset License
 
-The GM-DEM-SR dataset is released under the Creative Commons Attribution 4.0 International License (CC BY 4.0), unless otherwise noted.
+The GM-DEM-SR dataset is released under the Creative Commons Attribution 4.0
+International License (CC BY 4.0), unless otherwise noted.
 
-Users are free to share and adapt this dataset for research, education, and commercial or non-commercial applications, provided that appropriate credit is given to the GM-DEM-SR dataset and the original elevation data providers.
+Users are free to share and adapt this dataset for research, education, and
+commercial or non-commercial applications, provided that appropriate credit is
+given to the GM-DEM-SR dataset and the original elevation data providers.
 
-This dataset contains derived DEM patches generated from multiple open elevation data products. The original elevation data remain subject to the licenses and terms of use of their respective providers.
+This dataset contains derived DEM patches generated from multiple open elevation
+data products. The original elevation data remain subject to the licenses and
+terms of use of their respective providers.
 
 ### Source Data Acknowledgement
 
-The high-resolution reference DEM patches are derived from Copernicus DEM GLO-30. Copernicus DEM GLO-30 and GLO-90 are available worldwide under a free license, and users are requested to cite the Copernicus DEM DOI when using the data.
+The high-resolution reference DEM patches are derived from Copernicus DEM GLO-30.
+Copernicus DEM GLO-30 and GLO-90 are available worldwide under a free license,
+and users are requested to cite the Copernicus DEM DOI when using the data.
 
-Cross-source evaluation subsets are derived from NASADEM and AW3D30. NASADEM data distributed by LP DAAC are public domain / CC0. AW3D30 is provided by JAXA and can be used free of charge under the JAXA terms of use; users should acknowledge JAXA as the original data provider.
+Cross-source evaluation subsets are derived from NASADEM and AW3D30. NASADEM
+data distributed by LP DAAC are public domain / CC0. AW3D30 is provided by JAXA
+and can be used free of charge under the JAXA terms of use; users should
+acknowledge JAXA as the original data provider.
 
-DEM data were accessed through OpenTopography. Users should also acknowledge OpenTopography as the data access platform.
-
+DEM data were accessed through OpenTopography. Users should also acknowledge
+OpenTopography as the data access platform.
