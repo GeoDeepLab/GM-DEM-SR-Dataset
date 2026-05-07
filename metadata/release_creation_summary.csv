@@ -1,0 +1,9 @@
+﻿metric,value
+rows_additional_region_cross_source_test,4500
+rows_additional_regions_test,4500
+rows_main_test,4500
+rows_main_train,36000
+rows_main_val,4500
+rows_same_region_cross_source_test,4500
+skipped_existing,261000
+written_readme,1

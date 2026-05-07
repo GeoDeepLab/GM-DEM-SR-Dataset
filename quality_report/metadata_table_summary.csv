@@ -1,0 +1,7 @@
+﻿table,rows,path_columns,path_issues,missing_files
+main_train,36000,4,0,0
+main_val,4500,4,0,0
+main_test,4500,4,0,0
+additional_regions_test,4500,4,0,0
+same_region_cross_source_test,4500,7,0,0
+additional_region_cross_source_test,4500,7,0,0
