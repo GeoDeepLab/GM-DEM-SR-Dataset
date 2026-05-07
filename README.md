@@ -277,7 +277,6 @@ The dataset was built from publicly available DEM sources downloaded via OpenTop
 - COP30: primary 30 m HR reference DEM.
 - NASADEM: cross-source DEM.
 - AW3D30: cross-source DEM.
-- COP90 and SRTMGL3: native-LR application sources in the broader project workflow.
 
 NASADEM and AW3D30 were converted to EGM2008 before cross-source alignment.
 
