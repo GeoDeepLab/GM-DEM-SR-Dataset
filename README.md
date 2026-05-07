@@ -405,5 +405,4 @@ data distributed by LP DAAC are public domain / CC0. AW3D30 is provided by JAXA
 and can be used free of charge under the JAXA terms of use; users should
 acknowledge JAXA as the original data provider.
 
-DEM data were accessed through OpenTopography. Users should also acknowledge
-OpenTopography as the data access platform.
+DEM data were accessed through OpenTopography.
