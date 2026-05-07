@@ -60,7 +60,9 @@ Release totals:
 ### Mountain Coverage
 
 The table below lists all mountain regions represented in the release metadata.
-Counts are patch entries per task.
+Counts are patch entries per task. Core IDs C01-C09 are full-quota core regions;
+C10-C12 are smaller core regions retained at one-third core quota. Additional
+held-out regions use A01-A03.
 
 | ID | Mountain zh | Mountain en | Main train | Main val | Main test | Additional regions | Same-region cross-source | Additional-region cross-source | Total metadata rows |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
@@ -70,15 +72,15 @@ Counts are patch entries per task.
 | C01 | 喜马拉雅中东段 | Central-Eastern Himalaya | 3600 | 450 | 450 | 0 | 450 | 0 | 4950 |
 | C02 | 横断山区 | Hengduan Mountains | 3600 | 450 | 450 | 0 | 450 | 0 | 4950 |
 | C03 | 天山 | Tian Shan | 3600 | 450 | 450 | 0 | 450 | 0 | 4950 |
-| C04 | 喀喇昆仑山脉 | Karakoram | 1200 | 150 | 150 | 0 | 150 | 0 | 1650 |
-| C04 | 日本山地 / 日本阿尔卑斯 | Japanese Mountains / Japanese Alps | 1200 | 150 | 150 | 0 | 150 | 0 | 1650 |
-| C04 | 比利牛斯山脉 | Pyrenees | 1200 | 150 | 150 | 0 | 150 | 0 | 1650 |
-| C05 | Zagros-Alborz | Zagros-Alborz | 3600 | 450 | 450 | 0 | 450 | 0 | 4950 |
-| C06 | 阿尔卑斯山 | Alps | 3600 | 450 | 450 | 0 | 450 | 0 | 4950 |
-| C07 | 落基山脉 | Rocky Mountains | 3600 | 450 | 450 | 0 | 450 | 0 | 4950 |
-| C08 | 热带安第斯 | Tropical Andes | 3600 | 450 | 450 | 0 | 450 | 0 | 4950 |
-| C09 | 中部干旱安第斯 | Central Dry Andes | 3600 | 450 | 450 | 0 | 450 | 0 | 4950 |
-| C10 | 埃塞俄比亚高原 / 东非高地 | Ethiopian Highlands / East African Highlands | 3600 | 450 | 450 | 0 | 450 | 0 | 4950 |
+| C04 | Zagros-Alborz | Zagros-Alborz | 3600 | 450 | 450 | 0 | 450 | 0 | 4950 |
+| C05 | 阿尔卑斯山 | Alps | 3600 | 450 | 450 | 0 | 450 | 0 | 4950 |
+| C06 | 落基山脉 | Rocky Mountains | 3600 | 450 | 450 | 0 | 450 | 0 | 4950 |
+| C07 | 热带安第斯 | Tropical Andes | 3600 | 450 | 450 | 0 | 450 | 0 | 4950 |
+| C08 | 中部干旱安第斯 | Central Dry Andes | 3600 | 450 | 450 | 0 | 450 | 0 | 4950 |
+| C09 | 埃塞俄比亚高原 / 东非高地 | Ethiopian Highlands / East African Highlands | 3600 | 450 | 450 | 0 | 450 | 0 | 4950 |
+| C10 | 日本山地 / 日本阿尔卑斯 | Japanese Mountains / Japanese Alps | 1200 | 150 | 150 | 0 | 150 | 0 | 1650 |
+| C11 | 比利牛斯山脉 | Pyrenees | 1200 | 150 | 150 | 0 | 150 | 0 | 1650 |
+| C12 | 喀喇昆仑山脉 | Karakoram | 1200 | 150 | 150 | 0 | 150 | 0 | 1650 |
 
 ## Dataset Tasks
 
