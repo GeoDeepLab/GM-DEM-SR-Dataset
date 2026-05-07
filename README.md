@@ -228,7 +228,6 @@ metadata/main_test.csv
 metadata/additional_regions_test.csv
 metadata/same_region_cross_source_test.csv
 metadata/additional_region_cross_source_test.csv
-metadata/all_tasks.csv
 ```
 
 Mountain-name columns:
